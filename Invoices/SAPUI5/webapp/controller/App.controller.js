@@ -11,6 +11,10 @@ sap.ui.define([
 
             onInit: function () {
 
+            },
+
+            onOpenDialogHeader: function () {
+                this.getOwnerComponent().openHelloDialog(); //funcion declarada en component.js
             }
 
         });

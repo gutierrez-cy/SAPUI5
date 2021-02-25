@@ -2,15 +2,13 @@
 sap.ui.define([
     "sap/ui/core/mvc/Controller",
     "sap/m/MessageToast",
-    "sap/ui/core/Fragment"
 ],
     /**
      * 
      * @param {typeof sap.ui.core.mvc.Controller} Controller 
      * @param {typeof sap.m.MessageToast} MessageToast 
-     * @param {typeof sap.ui.core.Fragment} Fragment 
      */
-    function (Controller, MessageToast, Fragment) {
+    function (Controller, MessageToast) {
 
         return Controller.extend("logaligroup.SAPUI5.controller.HelloPanel", {
             //Propiedades contrololador
@@ -26,27 +24,9 @@ sap.ui.define([
                 MessageToast.show(sMsg);
             },
 
-            onOpenDialog: function () {
-                const oView = this.getView();
-
-                if (!this.byId("helloDialog")) { //Si el dialogo no esta cargado
-                    Fragment.load({
-                        id: oView.getId(), //donde esta?
-                        name: "logaligroup.SAPUI5.view.HelloDialog",
-                        controller: this //controlador para cerrar dialogo
-                        //despues de que, se tenga, el dialogo cargado
-                    }).then(function (oDialog) {
-                        oView.addDependent(oDialog);
-                        oDialog.open();
-                    });
-                } else { //si ya esta cargado, abrelo
-                    this.byId("helloDialog").open();
-                }
-            },
-
-            onCloseDialog: function () {
-                 this.byId("helloDialog").close(); //Cerrar dialogo
-            }    
+            onOpenDialog: function() {
+                this.getOwnerComponent().openHelloDialog(); //funcion declarada en component.js
+            }
             
         });
     });

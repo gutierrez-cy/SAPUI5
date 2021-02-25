@@ -7,10 +7,9 @@
             <pages>
                 <Page title="{i18n>appTitle}">
                     <headerContent >
-                        <Button id="helloDialogButton"
+                        <Button id="helloDialogHeader"
                         icon="sap-icon://action"
-                        text="{i18n>showHelloDialogBut}"  
-                        press=".onOpenDialog"
+                        press=".onOpenDialogHeader"
                         class="sapUiSmallMarginEnd"/>
                     </headerContent>
                     <content>
