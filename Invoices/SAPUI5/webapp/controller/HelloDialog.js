@@ -29,7 +29,7 @@ sap.ui.define([
                             oView.byId("helloDialog").close(); //Cerrar dialogo
                         }
                     };
-
+                    //cargar fragmento
                     Fragment.load({
                         id: oView.getId(), //donde esta?
                         name: "logaligroup.SAPUI5.view.HelloDialog",
