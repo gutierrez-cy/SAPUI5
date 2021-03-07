@@ -25,7 +25,7 @@ sap.ui.define([
                     usd: "USD",
                     eur: "EUR"
                 });
-                this.getView().setModel(oViewModel, "currency");
+                this.getView().setModel(oViewModel, "currency");//para que la vista pueda acceder al modelo a través del identificador currency
             },
 
             onFilterInvoices: function (oEvent) {
