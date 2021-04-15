@@ -9,7 +9,7 @@ sap.ui.getCore().attachInit(function () {
 
     //se cargan los modulos donde estan los tests antes de arrancar
     sap.ui.require([
-        "logaligroup/SAPUI5/test/unit/AllTests"
+        "logaligroup/SAPUI5/test/integration/NavigationJourney"
     ], function () {
         QUnit.start();
     });

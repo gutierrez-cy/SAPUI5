@@ -36,7 +36,7 @@ sap.ui.define([
                 getView : this.stub().returns(oViewStub)
             };
 
-            let fnIsolatedFormatter = InvoicesFormatter.invoiceStatus.bind(oControllerStub);
+            let fnIsolatedFormatter = InvoicesFormatter.invoicesStatus.bind(oControllerStub);
 
             //Assert    
             assert.strictEqual(fnIsolatedFormatter("A"), "New", "The invoice status for A is correct");
